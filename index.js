@@ -6,9 +6,11 @@ const app = express()
 app.all('/', (req, res) => {
     console.log("Just got a request!")
 
-    const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+    const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
-    console.log(connection);
+    const wallet = new solanaWeb3.PublicKey(process.env.BCC_DEV_WALLET_ADDRESS);
+
+    console.log(wallet);
 
     res.send('Yoza!')
 })
