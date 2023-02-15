@@ -8,9 +8,9 @@ app.all('/', (req, res) => {
 
     const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
-    const wallet = new PublicKey(process.env.BCC_DEV_WALLET_ADDRESS);
+    // const wallet = new PublicKey(process.env.BCC_DEV_WALLET_ADDRESS);
 
-    console.log(wallet);
+    console.log(process.env.BCC_DEV_WALLET_ADDRESS);
 
     res.send('Yoza!')
 })
