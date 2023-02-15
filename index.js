@@ -1,4 +1,4 @@
-import { clusterApiUrl, Connection } from "@solana/web3.js";
+const { clusterApiUrl, Connection } = require("@solana/web3.js");
 
 const express = require('express')
 const app = express()
