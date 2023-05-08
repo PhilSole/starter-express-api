@@ -40,7 +40,7 @@ app.get('/', logger, (req, res) => {
 });
 
 // Position of this is important. Will not run for / requests here.
-app.use(logger);
+// app.use(logger);
 
 const otherRouter = require('./routes/other');
 app.use('/other', otherRouter);
